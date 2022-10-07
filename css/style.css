@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 400px;
+}
+
+.title {
+    background-color: peru;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.text {
+    background-color: burlywood;
+    padding: 10px;
+}
+
+i {
+    padding-left: 300px;
+}
+
+.delete {
+    display: none;
+    padding: 0px;
+    opacity: 0;
+}
