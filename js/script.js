@@ -1,25 +1,18 @@
-const icons = document.querySelectorAll('i');
+const icons = document.querySelectorAll('.icon');
 
-for (let i = 0 ; i < icons.length ; i++ ) {
+for (let i = 0; i < icons.length; i++) {
     icons[i].addEventListener('click' , function() {
-        close(icons);
+        console.log('icon clicked');
         upDown(this);
-    });
-};
+    })
+}
 
 function upDown(element) {
-    if (this.classList.contains('fa-chevron-down')) {
-        this.parentNode.nextElementSibling.classList.add('delete');
-        this.classList.replace('fa-chevron-down' , 'fa-chevron-up');
+    if (element.classList.contains('fa-chevron-down')) {
+        element.parentNode.nextElementSibling.classList.add('delete');
+        element.classList.replace('fa-chevron-down' , 'fa-chevron-up');
     } else {
-        this.parentNode.nextElementSibling.remove('delete');
-        this.classList.replace('fa-chevron-up' , 'fa-chevron-down');
-    };
-};
-
-function close(icons) {
-    for ( let i = 0 ; i < icons.length ; i++ ) {
-        icons[i].parentNode.nextElementSibling.classList.add('delete');
-        icons[i].classList.replace('fa-chevron-down' , 'fa-chevron-up');
-    };
-};
+        element.parentNode.nextElementSibling.classList.remove('delete');
+        element.classList.replace('fa-chevron-up' , 'fa-chevron-down');
+    }
+}
